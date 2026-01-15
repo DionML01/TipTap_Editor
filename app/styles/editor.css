@@ -1,0 +1,231 @@
+/* ===========================
+   Editor Root
+   =========================== */
+
+.editor-content {
+  min-height: 200px;
+  padding: 1rem;
+  line-height: 1.6;
+  font-size: 16px;
+  caret-color: #111827;
+}
+
+.editor-content,
+.editor-content:focus {
+  outline: none;
+}
+
+/* ===========================
+   Placeholder
+   =========================== */
+
+.editor-content p.is-editor-empty:first-child::before {
+  content: attr(data-placeholder);
+  color: #adb5bd;
+  pointer-events: none;
+  height: 0;
+  float: left;
+}
+
+/* ===========================
+   Paragraphs
+   =========================== */
+
+.editor-content p {
+  margin: 0.75rem 0;
+}
+
+/* ===========================
+   Headings
+   =========================== */
+
+.editor-content h1 {
+  font-size: 1.875rem;
+  font-weight: 700;
+  margin: 1.5rem 0 1rem;
+}
+
+.editor-content h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 1.25rem 0 0.75rem;
+}
+
+.editor-content h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 1rem 0 0.5rem;
+}
+
+/* ===========================
+   Lists
+   =========================== */
+
+.editor-content ul,
+.editor-content ol {
+  padding-left: 1.25rem;
+  margin: 0.75rem 0;
+}
+
+.editor-content ul {
+  list-style-type: circle;
+}
+
+.editor-content ol {
+  list-style-type: decimal;
+}
+
+.editor-content li {
+  margin: 0.25rem 0;
+}
+
+.editor-content li > p {
+  margin: 0;
+}
+
+/* ===========================
+   Blockquote
+   =========================== */
+
+.editor-content blockquote {
+  border-left: 3px solid #e5e7eb;
+  padding-left: 1rem;
+  color: #4b5563;
+  margin: 1rem 0;
+}
+
+/* ===========================
+   Inline formatting
+   =========================== */
+
+.editor-content strong {
+  font-weight: 600;
+}
+
+.editor-content em {
+  font-style: italic;
+}
+
+.editor-content code {
+  background: #0f172a;
+  color: #e2e8f0;
+  padding: 0.5rem 0.6125rem;
+  border-radius: 6px;
+  font-size: 0.875em;
+  font-family: "Fira Code", "Menlo", "Monaco", monospace;
+  border: 1px solid #1e293b;
+}
+
+/* ===========================
+   Code blocks
+   =========================== */
+
+.editor-content pre {
+  background: #0f172a;
+  color: #e2e8f0;
+  padding: 1rem 1.25rem;
+  border-radius: 8px;
+  overflow-x: auto;
+  font-size: 0.875rem;
+  font-family: "Fira Code", "Menlo", "Monaco", monospace;
+  line-height: 1.7;
+  border: 1px solid #1e293b;
+  margin: 1rem 0;
+}
+
+.editor-content pre code {
+  background: transparent;
+  padding: 0;
+  color: inherit;
+}
+
+.editor-content pre::selection,
+.editor-content code::selection {
+  background: #1e293b;
+  color: #f8fafc;
+}
+
+/* ===========================
+   Links
+   =========================== */
+
+.editor-content a {
+  color: #2563eb;
+  text-decoration: underline;
+}
+
+/* ===========================
+   Tables (if added later)
+   =========================== */
+
+.editor-content table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.editor-content th,
+.editor-content td {
+  border: 1px solid #e5e7eb;
+  padding: 0.5rem;
+}
+
+/* ===========================
+   Selection
+   =========================== */
+
+.editor-content ::selection {
+  background: #dbeafe;
+}
+
+/* ===========================
+   Image
+   =========================== */
+
+.editor-content img {
+  max-width: 100%;
+}
+
+.editor-content img.ProseMirror-selectednode {
+  outline: 3px solid #3b82f6;
+}
+
+/* Image resize wrapper (injected by tiptap-extension-resize-image) */
+.image-resizer {
+  display: inline-block;
+  position: relative;
+}
+
+/* Resize handles */
+.image-resizer-handle {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: #3b82f6;
+  border-radius: 50%;
+  z-index: 10;
+}
+
+/* Handle positions */
+.image-resizer-handle.top-left {
+  top: -5px;
+  left: -5px;
+  cursor: nwse-resize;
+}
+
+.image-resizer-handle.top-right {
+  top: -5px;
+  right: -5px;
+  cursor: nesw-resize;
+}
+
+.image-resizer-handle.bottom-left {
+  bottom: -5px;
+  left: -5px;
+  cursor: nesw-resize;
+}
+
+.image-resizer-handle.bottom-right {
+  bottom: -5px;
+  right: -5px;
+  cursor: nwse-resize;
+}
